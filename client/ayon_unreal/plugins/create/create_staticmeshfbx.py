@@ -12,3 +12,7 @@ class CreateStaticMeshFBX(UnrealAssetCreator):
     product_type = "staticMesh"
     icon = "cube"
     default_variants = ["Main"]
+
+    def get_publish_families(self) -> list[str]:
+        """Return the families that this creator supports."""
+        return ["staticMesh", "staticMesh.FBX"]
